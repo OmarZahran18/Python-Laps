@@ -2,7 +2,7 @@ def validate_email(email):
     if "@" in email and ".com" in email:
         if email[0] != "@" and email[-1] != "@":
             i = email.split("@")
-            if len (i) == 2 and i[1].count(".") >=1 and i[1].split(".")[0] != "":
+            if len (i) == 2 and i[1].count(".") <=1 and i[1].split(".")[0] != "":
                 if email[-4:] == ".com":
                  return True
     return False
